@@ -1,21 +1,72 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# JobQuest AI
 
-# Run and deploy your AI Studio app
+**Tailored job search by agents you choose.**
 
-This contains everything you need to run your app locally.
+An open source, agentic workflow that turns your CV and preferences into **ranked job opportunities** and **application drafts**, with a human in the loop.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1sYMUUDnRDD9plmqFPwWhDcNdYHWJXziY
+---
 
-## Run Locally
+## What it does
 
-**Prerequisites:**  Node.js
+The Job Seeker Agent automates the most time-consuming parts of the job search while keeping full control with the user.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Agent Workflow
 
+### 1. Getting to know you
+- Upload your **CV**
+- Extract:
+  - Professional experience
+  - Skills and seniority
+- Define job preferences, for example:
+  - Role: *Freelance Data Scientist*
+  - Location: *Remote globally* or *Hybrid Germany*
+  - Remote share: *≥ 80%*
+
+---
+
+### 2. Searcher
+- Scrapes job listings from the web
+- Uses **Apify**
+- Produces structured job data as **JSON**
+
+---
+
+### 3. Evaluator
+- Ranks jobs based on fit
+- Produces an output file in **Google Drive**
+- Scoring dimensions:
+  - **Preference fit**
+  - **Skill fit**
+
+---
+
+### 4. Application Assistant
+- Generates:
+  - **Draft 1:** Application letter
+  - **Draft 2:** First phone interview Q&A
+- Designed for **human review and approval**
+
+---
+
+## Tech Stack
+- n8n for agent orchestration
+- Apify for job scraping
+- Google Drive for outputs
+- LLMs for evaluation and drafting
+
+---
+
+## Extensions (planned)
+- Auto-apply with human approval
+- Continuous job monitoring
+- Multiple agent configurations
+- Recruiter and platform versions
+
+---
+
+## Authors
+- Marc Klose  
+- Markus Einer  
+- Philipp Schaz  
