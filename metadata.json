@@ -1,0 +1,5 @@
+{
+  "name": "JobQuest AI - Smart Matcher",
+  "description": "An AI-powered job search assistant that analyzes your resume, scrapes top job boards, and provides ranked matches with detailed fit analysis.",
+  "requestFramePermissions": []
+}
